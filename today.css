@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,body a{
+    font-family: 'poppins';
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+body a:hover{
+    color: black;
+}
+#left{
+    position: absolute;
+    left: 20px;
+    padding: 30px;
+    height: 650vh;
+    width: 5%;
+    background-image: linear-gradient(80deg, rgb(17, 55, 179),rgb(166, 181, 233));
+    filter: blur(200px);
+  }
+  #right{
+    position: absolute;
+    right: 0;
+    height: 650vh;
+    width: 5%;
+    background-image: linear-gradient(80deg, rgb(214, 31, 70),rgb(216, 24, 63));
+    filter: blur(200px);
+  }
+nav{
+    position: fixed;
+    background: white;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+}
+label.logo{
+    color: black;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    cursor: pointer;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    position: relative;
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 20px;
+    text-transform: uppercase;
+}
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    bottom: 0;
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(to right, #10f4cb, #df1414f0);
+    background-size: 100%;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
+  a:hover{
+    color: black;
+  }
+ a.active{
+    color: #0082e6;
+}
+  a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  .checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+  /* Home section */
+
+  #home{
+    width: 100%;
+    height: 100vh;
+    padding-top: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .homeleft{
+    flex: 4;
+    padding: 0 80px;
+  }
+ .content{
+    width: 40%;
+    height: 80vh;
+    background-image: url("alexis.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: -50px;
+  }
+  .homeleft h4{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .homeleft h2{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .homeleft .homeanimate{
+    width: 40%;
+  font-size: 20px;
+  font-weight: 600;
+  background: linear-gradient(to right, #10f4cb, #df1414f0,#df1414f0);
+  background-size: 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding-top: 10px;
+  }
+.experiprojects{
+  display: flex;
+}
+.experience {
+  border-right: 1px solid gray;
+  padding-right: 20px;
+}
+.top h1 {
+  font-weight: 600;
+}
+.text,
+.icon {
+  font-size: 18px;
+  font-weight: 200;
+  padding-top: 20px;
+}
+.projects {
+  padding-left: 20px;
+}
+.link {
+  display: flex;
+}
+.link .textbro {
+  font-size: 16px;
+  font-weight: 200;
+  padding: 20px 0 0 10px;
+}
+.textbro a {
+  position: relative;
+}
+.textbro a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 90%;
+  height: 2px;
+  background: linear-gradient(to right, #10f4cb, #df1414f0);
+  background-size: 100%;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+.textbro a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.textbro a:hover{
+  color: black;
+}
+.icon {
+  transform: rotate(45deg);
+  padding-left: 10px;
+}
+
+/* Home Right Side */
+
+  .homeright{
+    flex: 4;
+    padding-top: 0;
+  }
+  .content{
+    width: 100%;
+  }
+  /* About side Design */
+  #about{
+    width: 100%;
+    height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutleft{
+    flex: 4;
+    padding-top: 0;
+    background: url("alexis.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    
+  }
+  
+  /* navbar Media Queries */
+  @media(max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+
+    }
+  }
+  @media(max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 50vh;
+        background: white;
+        opacity: .8;
+        top: -900%;
+        text-align: left;
+        transition: ease-out;
+        border-bottom: 1px solid gray;
+        z-index: -1;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 15px;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        top: 80px;
+    }
+    #home{
+      display: block;
+    }
+    .homeleft{
+      padding: 0 15px;
+      width: 100%;
+    }
+    .homeleft h4{
+      font-size: 16px;
+    }
+    .homeleft .homeanimate{
+      width: 100%;
+    font-size: 40px;
+    font-weight: 700;
+    background-size: 75%;
+    }
+    .top h1 {
+      font-weight: 700;
+      font-size: 40px;
+    }
+    .content{
+      width: 95%;
+      margin: 15px;
+    }
+  }
